@@ -212,7 +212,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 981136410}
         m_TargetAssemblyTypeName: UpgradeController, Assembly-CSharp
-        m_MethodName: IncreaseVelocity
+        m_MethodName: TripleShoot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1684,7 +1684,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 738934419}
-  timer: {fileID: 738934420}
 --- !u!1 &1011302151
 GameObject:
   m_ObjectHideFlags: 0
@@ -2147,7 +2146,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 981136410}
         m_TargetAssemblyTypeName: UpgradeController, Assembly-CSharp
-        m_MethodName: TripleShoot
+        m_MethodName: ResetUpgrades
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2167,6 +2166,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 981136405}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: Load
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: menu
           m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1189913841

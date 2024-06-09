@@ -5,7 +5,7 @@ using UnityEngine;
 public class UpgradeController : MonoBehaviour
 {
     public PlayerController player;
-    public Timer timer;
+    private Timer timer;
 
     void Start()
     {
@@ -46,6 +46,21 @@ public class UpgradeController : MonoBehaviour
             timer.hasIncreasedTime = true;
         }
     }
+
+
+    public void ResetUpgrades()
+    {
+        PlayerPrefs.DeleteKey("VelocityIncreased");
+        PlayerPrefs.DeleteKey("TripleShoot");
+        PlayerPrefs.DeleteKey("IncreasedDead");
+        PlayerPrefs.DeleteKey("IncreasedShield");
+        PlayerPrefs.DeleteKey("IncreasedCure");
+        PlayerPrefs.DeleteKey("IncreasedTime");
+
+    }
+
+
+
     public void IncreaseVelocity()
     {
         if (!player.velocityIncreasedApplied)
