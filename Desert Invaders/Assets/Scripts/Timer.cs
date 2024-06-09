@@ -11,10 +11,12 @@ public class Timer : MonoBehaviour
     public AudioSource audioPopUp;
 
     private bool started = false;
+    public bool hasIncreasedTime = false;
 
     void Start()
     {
         StartTimer();
+
     }
 
     void Update()

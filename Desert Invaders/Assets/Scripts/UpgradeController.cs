@@ -7,66 +7,101 @@ public class UpgradeController : MonoBehaviour
     public PlayerController player;
     public Timer timer;
 
-    public bool hasVelocityIncreased = false;
-    public bool hasTripleShoot = false;
-    public bool hasIncreasedDead = false;
-    public bool hasIncreasedShield = false;
-    public bool hasIncreasedCure = false;
+    void Start()
+    {
 
-    public void Update()
-    {
-        ApplyUpgrade();
-    }
-    public void ApplyUpgrade() 
-    {
-        IncreaseVelocity();
-        TripleShoot();
-        IncreasedDead();
-        IncreasedShieldTime();
-        IncreasedCure();
-    }
-    public void IncreaseVelocity()
-    {
-        if (hasVelocityIncreased && !player.velocityIncreasedApplied)
+        if (PlayerPrefs.GetInt("VelocityIncreased", 0) == 1)
         {
             player.moveSpeed *= 2;
             player.velocityIncreasedApplied = true;
+        }
+
+        if (PlayerPrefs.GetInt("TripleShoot", 0) == 1)
+        {
+            player.hasTripleShoot = true;
+        }
+
+        if (PlayerPrefs.GetInt("IncreasedDead", 0) == 1)
+        {
+            player.enemiesDestroyed += 1;
+            player.deadIncreasedApplied = true;
+        }
+
+        if (PlayerPrefs.GetInt("IncreasedShield", 0) == 1)
+        {
+            player.shieldTime += 5;
+            player.hasIncreasedShield = true;
+        }
+
+        if (PlayerPrefs.GetInt("IncreasedCure", 0) == 1)
+        {
+            player.cure += 5;
+            player.hasIncreasedCure = true;
+        }
+
+        
+        if (PlayerPrefs.GetInt("IncreasedTime", 0) == 1)
+        {
+            timer.levelTime += 30;
+            timer.hasIncreasedTime = true;
+        }
+    }
+    public void IncreaseVelocity()
+    {
+        if (!player.velocityIncreasedApplied)
+        {
+            player.moveSpeed *= 2;
+            player.velocityIncreasedApplied = true;
+            PlayerPrefs.SetInt("VelocityIncreased", 1);
         }
     }
 
     public void TripleShoot()
     {
-        if(hasTripleShoot)
-        {
-            player.hasTripleShoot = true;
-        }
+        player.hasTripleShoot = true;
+        PlayerPrefs.SetInt("TripleShoot", 1);
     }
 
     public void IncreasedDead()
     {
-        if(hasIncreasedDead && !player.deadIncreasedApplied)
+        if(!player.deadIncreasedApplied)
         {
             int beforeIncreased = player.enemiesDestroyed;
             player.enemiesDestroyed = beforeIncreased + 1;
             player.deadIncreasedApplied = true;
+            PlayerPrefs.SetInt("IncreasedDead", 1);
         }
     }
 
     public void IncreasedShieldTime()
     {
-        if (hasIncreasedShield && !player.hasIncreasedShield)
+        if (!player.hasIncreasedShield)
         {
             player.shieldTime += 5;
             player.hasIncreasedShield = true;
+            PlayerPrefs.SetInt("IncreasedShield", 1);
         }
     }
 
     public void IncreasedCure()
     {
-        if (hasIncreasedCure && !player.hasIncreasedCure)
+        if (!player.hasIncreasedCure)
         {
             player.cure += 5;
             player.hasIncreasedCure = true;
+            PlayerPrefs.SetInt("IncreasedCure", 1);
         }
+    }
+
+    public void TimeIncreased()
+    {
+        if (!timer.hasIncreasedTime)
+        {
+            timer.levelTime += 30;
+            timer.hasIncreasedTime = true;
+            PlayerPrefs.SetInt("IncreasedTime", 1);
+        }
+
+
     }
 }

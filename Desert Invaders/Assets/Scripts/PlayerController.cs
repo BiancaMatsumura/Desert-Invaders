@@ -57,6 +57,7 @@ public class PlayerController : MonoBehaviour
         shieldBar.value = shieldTime;
         currentShieldTime = shieldTime;
         dialogueController.ShowDialogueByIndex(0);
+
     }
 
 
