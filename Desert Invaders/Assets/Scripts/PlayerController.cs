@@ -221,4 +221,16 @@ public class PlayerController : MonoBehaviour
             hasWon = true;
         }
     }
+
+    public void EnemiesDestroyed()
+    {
+        if (deadIncreasedApplied)
+        {
+            enemiesDestroyed += 2;
+        }
+        else
+        {
+            enemiesDestroyed++;
+        }
+    }
 }

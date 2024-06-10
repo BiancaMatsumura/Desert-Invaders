@@ -46,8 +46,8 @@ public class EnemyController1 : MonoBehaviour
             Instantiate(explosion, transform.position, transform.rotation);
             Destroy(gameObject);
             audioPoof.Play();
-            playerController.enemiesDestroyed++;
-            playerController.deadIncreasedApplied = false;
+            playerController.EnemiesDestroyed();
+           
         }
     }
 
@@ -60,8 +60,8 @@ public class EnemyController1 : MonoBehaviour
             Instantiate(heartPrefab,transform.position, Quaternion.identity);
             Destroy(gameObject);
             audioPoof.Play();
-            playerController.enemiesDestroyed++;
-            playerController.deadIncreasedApplied = false;
+            playerController.EnemiesDestroyed();
+            
         }
     }
 }

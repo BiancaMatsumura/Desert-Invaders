@@ -5,7 +5,7 @@ using UnityEngine;
 public class UpgradeController : MonoBehaviour
 {
     public PlayerController player;
-    private Timer timer;
+    public Timer levelTimer;
 
     void Start()
     {
@@ -23,7 +23,7 @@ public class UpgradeController : MonoBehaviour
 
         if (PlayerPrefs.GetInt("IncreasedDead", 0) == 1)
         {
-            player.enemiesDestroyed += 1;
+           
             player.deadIncreasedApplied = true;
         }
 
@@ -36,14 +36,15 @@ public class UpgradeController : MonoBehaviour
         if (PlayerPrefs.GetInt("IncreasedCure", 0) == 1)
         {
             player.cure += 5;
+            player.life += 50;
             player.hasIncreasedCure = true;
         }
 
         
         if (PlayerPrefs.GetInt("IncreasedTime", 0) == 1)
         {
-            timer.levelTime += 30;
-            timer.hasIncreasedTime = true;
+            levelTimer.levelTime += 30;
+            levelTimer.hasIncreasedTime = true;
         }
     }
 
@@ -81,8 +82,6 @@ public class UpgradeController : MonoBehaviour
     {
         if(!player.deadIncreasedApplied)
         {
-            int beforeIncreased = player.enemiesDestroyed;
-            player.enemiesDestroyed = beforeIncreased + 1;
             player.deadIncreasedApplied = true;
             PlayerPrefs.SetInt("IncreasedDead", 1);
         }
@@ -103,6 +102,7 @@ public class UpgradeController : MonoBehaviour
         if (!player.hasIncreasedCure)
         {
             player.cure += 5;
+            player.life += 50;
             player.hasIncreasedCure = true;
             PlayerPrefs.SetInt("IncreasedCure", 1);
         }
@@ -110,10 +110,10 @@ public class UpgradeController : MonoBehaviour
 
     public void TimeIncreased()
     {
-        if (!timer.hasIncreasedTime)
+        if (!levelTimer.hasIncreasedTime)
         {
-            timer.levelTime += 30;
-            timer.hasIncreasedTime = true;
+            levelTimer.levelTime += 30;
+            levelTimer.hasIncreasedTime = true;
             PlayerPrefs.SetInt("IncreasedTime", 1);
         }
 

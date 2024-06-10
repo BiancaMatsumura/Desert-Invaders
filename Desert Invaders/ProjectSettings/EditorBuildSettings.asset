@@ -15,6 +15,15 @@ EditorBuildSettings:
     path: Assets/01.Scenes/fase2.unity
     guid: 34df37792268e6645a7f7e864c8078a7
   - enabled: 1
+    path: Assets/01.Scenes/fase3.unity
+    guid: 44b302754116ceb499e2cb76c94afa1d
+  - enabled: 1
     path: Assets/01.Scenes/upgradeScene1.unity
     guid: 7bdcfc739e768f345b7970595b7b0d43
+  - enabled: 1
+    path: Assets/01.Scenes/upgradeScene2.unity
+    guid: f1931347a4fb972498bef94a01a8c873
+  - enabled: 1
+    path: Assets/01.Scenes/upgradeScene3.unity
+    guid: 64c5a049960a7e34984098b0c875dd8f
   m_configObjects: {}
