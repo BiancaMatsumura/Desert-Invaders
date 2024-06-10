@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -987,7 +987,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: fase1
+          m_StringArgument: fase3
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 810205036}
@@ -5329,7 +5329,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: fase1
+          m_StringArgument: fase3
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 810205036}
@@ -5624,7 +5624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1804262371}
-  levelTime: 70
+  levelTime: 90
   gameOverPanel: {fileID: 1079297478}
   audioPopUp: {fileID: 1114647976}
   hasIncreasedTime: 0
