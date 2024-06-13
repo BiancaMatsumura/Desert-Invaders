@@ -44,6 +44,12 @@ public class StarProjectilController : MonoBehaviour
                 enemyController1.EnemyTakeDamage(projectileDamage);
             }
 
+            BossController bossController = other.GetComponent<BossController>();
+            if(bossController != null)
+            {
+               bossController.BossTakeDamage(projectileDamage);
+            }
+
             Destroy(gameObject);
         }
     }

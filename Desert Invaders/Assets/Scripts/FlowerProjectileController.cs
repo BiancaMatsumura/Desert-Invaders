@@ -11,10 +11,19 @@ public class FlowerProjectileController : MonoBehaviour
 
     public PlayerController playerController;
     public EnemyController enemyController;
+    public BossController bossController;
 
     void Start()
     {
-        flowerDamage = enemyController.damage;
+        if(enemyController != null) 
+        {
+            flowerDamage = enemyController.damage;
+        }
+        else
+        {
+            flowerDamage = bossController.damage;
+        }
+        
         Destroy(gameObject, lifeTime);
     }
 
