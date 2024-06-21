@@ -27,10 +27,12 @@ public class BossController : MonoBehaviour
     public GameObject victoryPanel;
     private bool firstDeath = false;
 
+ 
     
     void Start()
     {
-        InvokeRepeating("Shoot",initialTimeShoot,intervalShoot);
+         InvokeRepeating("Shoot", initialTimeShoot, intervalShoot);
+   
     }
 
   
@@ -73,6 +75,7 @@ public class BossController : MonoBehaviour
 
     public void Shoot()
     {
+        
         GameObject projectile = Instantiate(flowerPrefab, firePoint.position, Quaternion.identity);
         FlowerProjectileController projectileController = projectile.GetComponent<FlowerProjectileController>();
         projectileController.flowerDamage = damage;
@@ -80,6 +83,28 @@ public class BossController : MonoBehaviour
         projectileController.player = player;
         projectileController.playerController = playerController;
     }
+
+    public void Shoot1()
+    {
+        for (int i = 0; i <= 2; i++)
+        {
+
+            float spreadAngle = 15;
+            GameObject projectile = Instantiate(flowerPrefab, firePoint.position, Quaternion.identity);
+            FlowerProjectileController projectileController = projectile.GetComponent<FlowerProjectileController>();
+            projectileController.flowerDamage = damage;
+            projectileController.bossController = this;
+            projectileController.player = player;
+            projectileController.playerController = playerController;
+
+            float rotationAngle = spreadAngle * (i - 1);
+            projectile.transform.Rotate(0, rotationAngle, 0);
+
+        }
+
+    }
+
+
 
 }
 

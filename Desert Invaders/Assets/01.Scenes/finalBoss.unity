@@ -2424,7 +2424,7 @@ MonoBehaviour:
   playerController: {fileID: 5502625908072513489}
   player: {fileID: 5502625908072513488}
   initialTimeShoot: 2
-  intervalShoot: 4
+  intervalShoot: 2
   speed: 7
   pointA: {fileID: 1837736135}
   pointB: {fileID: 2088286154}
