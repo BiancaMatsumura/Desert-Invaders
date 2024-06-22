@@ -6,6 +6,7 @@ public class FlowerProjectileController : MonoBehaviour
 {
     public float speed;
     public int flowerDamage;
+    public float initialMoveDuration = 0.5f;
     public float lifeTime = 5f;
     public Transform player;
 
@@ -13,6 +14,9 @@ public class FlowerProjectileController : MonoBehaviour
     public EnemyController enemyController;
     public BossController bossController;
 
+  
+    public bool followPlayer;
+   
     void Start()
     {
         if(enemyController != null) 
@@ -23,15 +27,15 @@ public class FlowerProjectileController : MonoBehaviour
         {
             flowerDamage = bossController.damage;
         }
-        
+       
         Destroy(gameObject, lifeTime);
     }
 
     void Update()
     {
-        if (player != null)
+       if (followPlayer && player != null)
         {
-            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+           
             Vector3 direction = (player.position - transform.position).normalized;
             transform.position += direction * speed * Time.deltaTime;
         }
@@ -42,10 +46,12 @@ public class FlowerProjectileController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             playerController.PlayerTakeDamege(flowerDamage);
+            Destroy(gameObject);
         }
         if (other.gameObject.CompareTag("PlayerAttack"))
         {
             Destroy(gameObject);
         }
     }
+
 }

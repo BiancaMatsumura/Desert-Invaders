@@ -53,6 +53,7 @@ public class EnemyController : MonoBehaviour
         projectileController.flowerDamage = damage;
         projectileController.playerController = playerController;
         projectileController.player = player;
+        projectileController.followPlayer = true;
         
     }
     public void EnemyTakeDamage(int damageAmaout)
