@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8124,6 +8124,14 @@ PrefabInstance:
       propertyPath: enemiesText
       value: 
       objectReference: {fileID: 2005222231}
+    - target: {fileID: -8822555217420028153, guid: 53e6d136395fe974cbb1073669fb96aa, type: 3}
+      propertyPath: dashCooldown
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8822555217420028153, guid: 53e6d136395fe974cbb1073669fb96aa, type: 3}
+      propertyPath: dashDuration
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: -8822555217420028153, guid: 53e6d136395fe974cbb1073669fb96aa, type: 3}
       propertyPath: enemiesToWin
       value: 15

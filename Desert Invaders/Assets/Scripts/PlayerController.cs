@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +16,13 @@ public class PlayerController : MonoBehaviour
     public int cure;
     public float shieldTime;
 
+    [Header("Dash")]
+    public float dashDuration = 1;
+    public float dashCooldown = 3;
+    public float dashVelocity = 20;
+    private bool isDashing = false;
+    private bool canDash = true;
+    
     [Header("Audios")]
     public AudioSource audioItem;
     public AudioSource audioDamage;
@@ -57,12 +65,17 @@ public class PlayerController : MonoBehaviour
         shieldBar.value = shieldTime;
         currentShieldTime = shieldTime;
         dialogueController.ShowDialogueByIndex(0);
-
+        canDash = true;
     }
 
 
     void Update()
     {
+        if (isDashing)
+        {
+            return;
+        }
+
         if (!pausePanel.activeSelf && !victoryPanel.activeSelf && !gameOverPanel.activeSelf && !youFailedPanel.activeSelf && Input.GetButtonDown("Fire1"))
         {
             Shoot();
@@ -95,12 +108,34 @@ public class PlayerController : MonoBehaviour
         {
             Victory();
         }
+
+        if (Input.GetKeyDown(KeyCode.Space) && canDash)
+        {
+            StartCoroutine(Dash());
+
+        }
     }
 
     void FixedUpdate()
     {
+        if (isDashing)
+        {
+            return;
+        }
         Vector3 Position = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         rig.velocity = Position * moveSpeed;
+    }
+
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        Vector3 Position = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        rig.velocity = Position * dashVelocity;
+        yield return new WaitForSeconds(dashDuration);
+        isDashing = false;
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
 
     public void Shoot()
