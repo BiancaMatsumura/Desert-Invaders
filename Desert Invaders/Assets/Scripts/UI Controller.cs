@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class UIController : MonoBehaviour
 {
@@ -10,11 +11,18 @@ public class UIController : MonoBehaviour
     public GameObject victoryPanel;
     public GameObject gameOverPanel;
     public AudioSource audioPopUp;
-
+    
     public Text counter;
 
     public Animator transitionAnim;
-    
+
+    public string desiredSceneName = "Intro";
+    private Scene currentScene;
+    private void Start()
+    {
+        currentScene = SceneManager.GetActiveScene();
+    }
+
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.Escape))
@@ -30,7 +38,17 @@ public class UIController : MonoBehaviour
                 audioPopUp.Play();
             }
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            currentScene = SceneManager.GetActiveScene();
+            if (currentScene.name == desiredSceneName)
+            {
+                Load("fase1");
+            }
+
+        }
+
     }
 
     public void Transition (string sceneName)

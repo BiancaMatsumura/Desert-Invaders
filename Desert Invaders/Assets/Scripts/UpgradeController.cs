@@ -13,6 +13,7 @@ public class UpgradeController : MonoBehaviour
         if (PlayerPrefs.GetInt("VelocityIncreased", 0) == 1)
         {
             player.moveSpeed += 4;
+            player.dashVelocity += 4;
             player.velocityIncreasedApplied = true;
         }
 
@@ -67,6 +68,7 @@ public class UpgradeController : MonoBehaviour
         if (!player.velocityIncreasedApplied)
         {
             player.moveSpeed += 4;
+            player.dashVelocity += 4;
             player.velocityIncreasedApplied = true;
             PlayerPrefs.SetInt("VelocityIncreased", 1);
         }

@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     public Camera mainCamera;
     public Slider healthSlider;
     public Slider shieldBar;
+    public Slider dashBar;
     public Text enemiesText;
     public GameObject pausePanel;
     public GameObject gameOverPanel;
@@ -44,6 +45,8 @@ public class PlayerController : MonoBehaviour
     public GameObject starProjectile;
     public Transform firePoint;
     public DialogueController dialogueController;
+    public GameObject trail;
+    public ScreenWrap screenWrap;
 
     [Header("Upgrade")]
     public bool hasTripleShoot = false;
@@ -57,15 +60,21 @@ public class PlayerController : MonoBehaviour
     private bool hasShield = false;
     private bool hasWon = false;
     private bool shieldAudioPlayed = false;
+    
 
     void Start()
     {
         rig = GetComponent<Rigidbody>();
+
         shieldBar.maxValue = shieldTime;
         shieldBar.value = shieldTime;
         currentShieldTime = shieldTime;
+
         dialogueController.ShowDialogueByIndex(0);
+
         canDash = true;
+        dashBar.maxValue = dashCooldown;
+        dashBar.value = dashCooldown;
     }
 
 
@@ -130,11 +139,28 @@ public class PlayerController : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
+
+        if (screenWrap.isWrapping == false)
+        {
+            trail.SetActive(true);
+        }
+
         Vector3 Position = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         rig.velocity = Position * dashVelocity;
+
         yield return new WaitForSeconds(dashDuration);
         isDashing = false;
-        yield return new WaitForSeconds(dashCooldown);
+        trail.SetActive(false);
+
+        float cooldownTime = 0f;
+        while (cooldownTime < dashCooldown)
+        {
+            cooldownTime += Time.deltaTime;
+            dashBar.value = dashCooldown - cooldownTime; 
+            yield return null;
+        }
+
+        dashBar.value = dashCooldown;
         canDash = true;
     }
 
