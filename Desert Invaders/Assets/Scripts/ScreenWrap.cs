@@ -9,8 +9,9 @@ public class ScreenWrap : MonoBehaviour
     private float screenHeight;
     private float wrapZ = 15f;
 
-    public bool isWrapping = false;
-    public bool wrapped = false;
+    public bool isWrapping { get; private set; } = false;
+    public bool wrapped { get; private set; } = false;
+
     void Start()
     {
         isWrapping = false;
@@ -24,33 +25,26 @@ public class ScreenWrap : MonoBehaviour
     {
         WrapPlayer();
 
-        if (isWrapping)
-        {
-            wrapped = true;
-        }
-        if (wrapped)
-        {
-            isWrapping = false;
-
-        }
     }
 
     void WrapPlayer()
     {
-        
-
         Vector3 playerPos = transform.position;
+        bool wasWrapping = isWrapping;
+        isWrapping = false;
 
-        
+
         if (playerPos.x > screenWidth / 2)
         {
             playerPos.x = -screenWidth / 2;
             isWrapping = true;
+           
         }
         else if (playerPos.x < -screenWidth / 2)
         {
             playerPos.x = screenWidth / 2;
             isWrapping = true;
+            
         }
 
         
@@ -58,11 +52,13 @@ public class ScreenWrap : MonoBehaviour
         {
             playerPos.y = -screenHeight / 2;
             isWrapping = true;
+            
         }
         else if (playerPos.y < -screenHeight / 2)
         {
             playerPos.y = screenHeight / 2;
             isWrapping = true;
+            
         }
 
         
@@ -70,13 +66,26 @@ public class ScreenWrap : MonoBehaviour
         {
             playerPos.z = -wrapZ;
             isWrapping = true;
+           
         }
         else if (playerPos.z < -wrapZ)
         {
             playerPos.z = wrapZ;
             isWrapping = true;
+           
         }
 
-        transform.position = playerPos;
+        if (isWrapping)
+        {
+            transform.position = playerPos;
+            wrapped = true;
+        }
+        else if (wasWrapping && !isWrapping)
+        {
+            wrapped = false;
+        }
+
+
+       
     }
 }

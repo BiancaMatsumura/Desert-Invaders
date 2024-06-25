@@ -10,6 +10,7 @@ public class UIController : MonoBehaviour
     public GameObject pausePanel;
     public GameObject victoryPanel;
     public GameObject gameOverPanel;
+    public GameObject tutorialPanel;
     public AudioSource audioPopUp;
     
     public Text counter;
@@ -48,6 +49,20 @@ public class UIController : MonoBehaviour
             }
 
         }
+
+        if (Input.GetKeyUp(KeyCode.T))
+        {
+            if (tutorialPanel.activeSelf)
+            {
+                tutorialPanel.SetActive(false);
+                Time.timeScale = 1f;
+            }
+            else
+            {
+                tutorialPanel.SetActive(true);
+                Time.timeScale = 0f;
+            }
+        }    
 
     }
 

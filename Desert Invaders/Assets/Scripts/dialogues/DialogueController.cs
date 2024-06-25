@@ -14,10 +14,7 @@ public class DialogueController : MonoBehaviour
     public AudioSource popUpAudio;
     public AudioSource typingAudio;
 
-    void Start()
-    {
-        dialoguePanel.SetActive(false);
-    }
+
     public void ShowDialogueByIndex(int index)
     {
         if (index >= 0 && index < dialogues.Count)
