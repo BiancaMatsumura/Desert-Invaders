@@ -60,7 +60,11 @@ public class PlayerController : MonoBehaviour
     private bool hasShield = false;
     private bool hasWon = false;
     private bool shieldAudioPlayed = false;
-    
+
+    private bool dialogueTriggerShield = false;
+    private bool hasDialogueShield = false;
+    private bool dialogueTriggerDamage = false;
+    private bool hasDialogueDamage = false;
 
     void Start()
     {
@@ -121,6 +125,8 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(Dash());
 
         }
+
+
     }
 
     void FixedUpdate()
@@ -203,11 +209,16 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerTakeDamege(int damageAmount)
     {
-        
+       
         if (!hasShield)
         {
             life -= damageAmount;
             audioDamage.Play();
+            if (!hasDialogueDamage)
+            {
+                dialogueTriggerDamage = true;
+                Dialogue("damage");
+            }
         }
        
         if(life <= 0)
@@ -223,6 +234,11 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Shield"))
         {
+            if (!hasDialogueShield)
+            {
+                dialogueTriggerShield = true;
+                Dialogue("shield");
+            }
             audioItem.Play();
             Destroy(other.gameObject);
             hasShield = true;
@@ -238,11 +254,27 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void Dialogue( string dialogueName)
+    {
+        if (dialogueTriggerShield && dialogueName == "shield")
+        {
+            hasDialogueShield = true;
+            dialogueController.ShowDialogueByIndex(5);
+        }
+        if (dialogueTriggerDamage && dialogueName == "damage")
+        {
+            hasDialogueDamage = true;
+            dialogueController.ShowDialogueByIndex(6);
+        }
+    }
+
     public void ActivateShield()
     {
         
         currentShieldTime -= Time.deltaTime;
         shieldBar.value = currentShieldTime;
+
+
 
         Transform childTransform = transform.Find("shieldVSX");
         if (childTransform != null)

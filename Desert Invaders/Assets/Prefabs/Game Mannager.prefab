@@ -49,7 +49,7 @@ Canvas:
   m_GameObject: {fileID: 1800425460029404392}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 3
   m_PixelPerfect: 0
@@ -75,10 +75,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -209,6 +209,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6258085201363764369}
   - component: {fileID: 5928075778041332032}
+  - component: {fileID: 8959192647154603355}
+  - component: {fileID: 9043916245442141187}
+  - component: {fileID: 8142862177361788669}
+  - component: {fileID: 1008539258974812322}
+  - component: {fileID: 3520907884942530707}
   m_Layer: 0
   m_Name: Game Mannager
   m_TagString: Untagged
@@ -247,5 +252,90 @@ MonoBehaviour:
   pausePanel: {fileID: 0}
   victoryPanel: {fileID: 0}
   gameOverPanel: {fileID: 0}
+  tutorialPanel: {fileID: 0}
+  audioPopUp: {fileID: 0}
   counter: {fileID: 0}
   transitionAnim: {fileID: 6323333154974381215}
+--- !u!114 &8959192647154603355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8789425517310495552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b3c3034ace29424ab5456aaa2923f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 0}
+  levelTime: 80
+  gameOverPanel: {fileID: 0}
+  audioPopUp: {fileID: 0}
+  hasIncreasedTime: 0
+--- !u!114 &9043916245442141187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8789425517310495552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edcb279755ac99747a0374f9c729c35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  levelTimer: {fileID: 8959192647154603355}
+--- !u!114 &8142862177361788669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8789425517310495552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4fb15c98df5cf44b78112f2e57ea0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: eabbeb4fb1feb914fa0727e1fb95127c, type: 2}
+  soundsVol: {fileID: 0}
+  musicVol: {fileID: 0}
+--- !u!114 &1008539258974812322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8789425517310495552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eba0a44e6a289048acdc1dd6f24ca31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - {fileID: 11400000, guid: 7e7fde6bb16f49b49912763d384b891a, type: 2}
+  textContent: {fileID: 0}
+  dialoguePanel: {fileID: 0}
+  timeActivePanel: 3
+  typingSpeed: 0.04
+  popUpAudio: {fileID: 0}
+  typingAudio: {fileID: 0}
+--- !u!114 &3520907884942530707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8789425517310495552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eacc78c8502a43adfaed84dac0e50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 0}
+  fase1: fase1
+  fase2: fase2
+  fase3: fase3
+  finalBoss: finalBoss

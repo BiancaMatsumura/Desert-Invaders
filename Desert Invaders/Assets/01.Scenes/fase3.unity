@@ -2058,7 +2058,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463733379}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpgradeController, Assembly-CSharp
         m_MethodName: ResetUpgrades
         m_Mode: 1
@@ -2108,11 +2108,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601933312}
   m_CullTransparentMesh: 1
---- !u!1 &628440472 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8789425517310495552, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
-  m_PrefabInstance: {fileID: 97824161672801570}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &646134428
 GameObject:
   m_ObjectHideFlags: 0
@@ -3173,7 +3168,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463733379}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpgradeController, Assembly-CSharp
         m_MethodName: ResetUpgrades
         m_Mode: 1
@@ -5083,7 +5078,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463733379}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpgradeController, Assembly-CSharp
         m_MethodName: ResetUpgrades
         m_Mode: 1
@@ -5500,78 +5495,34 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5928075778041332032, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
   m_PrefabInstance: {fileID: 97824161672801570}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628440472}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b26458bc1287464e9aab7bb6e0ab74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1463733373
+--- !u!114 &1463733375 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8142862177361788669, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+  m_PrefabInstance: {fileID: 97824161672801570}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628440472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b3c3034ace29424ab5456aaa2923f11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerText: {fileID: 1804262371}
-  levelTime: 90
-  gameOverPanel: {fileID: 1079297478}
-  audioPopUp: {fileID: 1114647976}
-  hasIncreasedTime: 0
---- !u!114 &1463733375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628440472}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab4fb15c98df5cf44b78112f2e57ea0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mixer: {fileID: 24100000, guid: eabbeb4fb1feb914fa0727e1fb95127c, type: 2}
-  soundsVol: {fileID: 2028279285}
-  musicVol: {fileID: 1057099202}
---- !u!114 &1463733377
+--- !u!114 &1463733377 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+  m_PrefabInstance: {fileID: 97824161672801570}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628440472}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2eba0a44e6a289048acdc1dd6f24ca31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues:
-  - {fileID: 11400000, guid: 7e7fde6bb16f49b49912763d384b891a, type: 2}
-  textContent: {fileID: 403501439}
-  dialoguePanel: {fileID: 1216375272}
-  timeActivePanel: 3
-  typingSpeed: 0.04
-  popUpAudio: {fileID: 1114647976}
-  typingAudio: {fileID: 1338991985}
---- !u!114 &1463733379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628440472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edcb279755ac99747a0374f9c729c35c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 5502625908072513489}
-  levelTimer: {fileID: 1463733373}
 --- !u!1 &1494782505
 GameObject:
   m_ObjectHideFlags: 0
@@ -5678,7 +5629,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463733379}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpgradeController, Assembly-CSharp
         m_MethodName: ResetUpgrades
         m_Mode: 1
@@ -7924,30 +7875,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3446273297402816384, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3446273297402816384, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 3446273297402816384, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 1080
-      objectReference: {fileID: 0}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: popUpAudio
+      value: 
+      objectReference: {fileID: 1114647976}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: textContent
+      value: 
+      objectReference: {fileID: 403501439}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: typingAudio
+      value: 
+      objectReference: {fileID: 1338991985}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 1216375272}
+    - target: {fileID: 3049211614062219631, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 5502625908072513489}
     - target: {fileID: 4557883506209100178, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
-    - target: {fileID: 4557883506209100178, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
-      propertyPath: m_RenderMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4557883506209100178, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5928075778041332032, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: counter
       value: 
@@ -8008,6 +7959,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7945048488670449068, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 1804262371}
+    - target: {fileID: 7945048488670449068, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: audioPopUp
+      value: 
+      objectReference: {fileID: 1114647976}
+    - target: {fileID: 7945048488670449068, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: gameOverPanel
+      value: 
+      objectReference: {fileID: 1079297478}
+    - target: {fileID: 8142862177361788669, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: musicVol
+      value: 
+      objectReference: {fileID: 1057099202}
+    - target: {fileID: 8142862177361788669, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: soundsVol
+      value: 
+      objectReference: {fileID: 2028279285}
     - target: {fileID: 8789425517310495552, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: m_Name
       value: Game Mannager
@@ -8015,19 +7986,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8789425517310495552, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1463733373}
-    - targetCorrespondingSourceObject: {fileID: 8789425517310495552, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1463733375}
-    - targetCorrespondingSourceObject: {fileID: 8789425517310495552, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1463733377}
-    - targetCorrespondingSourceObject: {fileID: 8789425517310495552, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1463733379}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
 --- !u!1001 &5502625908072513487
 PrefabInstance:
@@ -8349,8 +8308,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b18184add4d5c84789b6ff934bdd26f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWrapping: 0
-  wrapped: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

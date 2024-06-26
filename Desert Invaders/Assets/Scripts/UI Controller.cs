@@ -17,7 +17,6 @@ public class UIController : MonoBehaviour
 
     public Animator transitionAnim;
 
-    public string desiredSceneName = "Intro";
     private Scene currentScene;
     private void Start()
     {
@@ -42,10 +41,16 @@ public class UIController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            string intro = "Intro";
+            string victoryScene = "victoryScene";
             currentScene = SceneManager.GetActiveScene();
-            if (currentScene.name == desiredSceneName)
+            if (currentScene.name == intro)
             {
                 Load("fase1");
+            }
+            if(currentScene.name == victoryScene)
+            {
+                Load("credits");
             }
 
         }

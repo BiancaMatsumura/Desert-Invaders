@@ -20,7 +20,7 @@ public class DialogueTrigger : MonoBehaviour
 
         if (currentScene.name == fase1)
         {
-            controller.ShowDialogueByIndex(0);
+            StartCoroutine(Fase1());
         }
         else if (currentScene.name == fase2)
         {
@@ -37,5 +37,10 @@ public class DialogueTrigger : MonoBehaviour
 
     }
     
-   
+   private IEnumerator Fase1()
+    {
+
+        yield return new WaitForSeconds(3);
+        controller.ShowDialogueByIndex(0);
+    }
 }

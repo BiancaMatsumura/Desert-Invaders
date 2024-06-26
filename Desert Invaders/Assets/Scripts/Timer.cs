@@ -13,6 +13,10 @@ public class Timer : MonoBehaviour
     private bool started = false;
     public bool hasIncreasedTime = false;
 
+    private bool timerDialogue = false;
+    private bool hasDialogue = false;
+    public DialogueController controller;
+
     void Start()
     {
         StartTimer();
@@ -30,6 +34,26 @@ public class Timer : MonoBehaviour
             {
                 GameOver();
             }
+
+            if(levelTime <= 10)
+            {
+                timerText.color = Color.red;
+                if (!hasDialogue)
+                {
+                    timerDialogue = true;
+                    activeDialogue();
+                }
+                
+            }
+        }
+    }
+
+    public void activeDialogue()
+    {
+        if (timerDialogue)
+        {
+            controller.ShowDialogueByIndex(4);
+            hasDialogue = true;
         }
     }
 
