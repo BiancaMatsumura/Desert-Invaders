@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &20503699 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8789425517310495552, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
-  m_PrefabInstance: {fileID: 1684780714}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &21901862
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,7 +645,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 981136406}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: mixerController, Assembly-CSharp
         m_MethodName: SoundVolChange
         m_Mode: 1
@@ -886,7 +881,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 981136406}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: mixerController, Assembly-CSharp
         m_MethodName: PlaySounds
         m_Mode: 1
@@ -1038,6 +1033,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 981136405}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: Load
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: credits
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &413682499
@@ -1381,7 +1388,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 981136406}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: mixerController, Assembly-CSharp
         m_MethodName: StopSounds
         m_Mode: 1
@@ -1560,27 +1567,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5928075778041332032, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
   m_PrefabInstance: {fileID: 1684780714}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 20503699}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b26458bc1287464e9aab7bb6e0ab74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &981136406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 20503699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab4fb15c98df5cf44b78112f2e57ea0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mixer: {fileID: 24100000, guid: eabbeb4fb1feb914fa0727e1fb95127c, type: 2}
-  soundsVol: {fileID: 331775418}
-  musicVol: {fileID: 1218241136}
 --- !u!1 &1011302151
 GameObject:
   m_ObjectHideFlags: 0
@@ -2193,7 +2185,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 981136406}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: mixerController, Assembly-CSharp
         m_MethodName: MusicVolChange
         m_Mode: 1
@@ -2874,7 +2866,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 981136406}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: mixerController, Assembly-CSharp
         m_MethodName: StopMusic
         m_Mode: 1
@@ -2981,6 +2973,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3520907884942530707, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6258085201363764369, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3025,13 +3021,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Mannager
       objectReference: {fileID: 0}
+    - target: {fileID: 8959192647154603355, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043916245442141187, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8789425517310495552, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 981136406}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
 --- !u!1 &1718272358
 GameObject:
@@ -8070,7 +8071,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 981136406}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: mixerController, Assembly-CSharp
         m_MethodName: PlayMusic
         m_Mode: 1
