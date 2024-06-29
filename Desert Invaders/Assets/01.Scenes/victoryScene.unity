@@ -640,6 +640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1667152885}
+  upgradeController: {fileID: 905240140}
   fase1: fase1
   credits: victoryScene
 --- !u!224 &612882150
@@ -879,6 +880,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+--- !u!114 &905240140 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9043916245442141187, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+  m_PrefabInstance: {fileID: 905240139}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edcb279755ac99747a0374f9c729c35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1011302151
 GameObject:
   m_ObjectHideFlags: 0

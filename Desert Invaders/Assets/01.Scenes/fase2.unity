@@ -2896,7 +2896,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463733375}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: mixerController, Assembly-CSharp
         m_MethodName: PlayMusic
         m_Mode: 1
@@ -3332,7 +3332,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463733375}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: mixerController, Assembly-CSharp
         m_MethodName: StopSounds
         m_Mode: 1
@@ -3875,7 +3875,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463733375}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: mixerController, Assembly-CSharp
         m_MethodName: StopMusic
         m_Mode: 1
@@ -4230,7 +4230,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1463733375}
+      - m_Target: {fileID: 97824161672801571}
         m_TargetAssemblyTypeName: mixerController, Assembly-CSharp
         m_MethodName: MusicVolChange
         m_Mode: 1
@@ -5301,28 +5301,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b26458bc1287464e9aab7bb6e0ab74f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1463733375 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7830507065555247139, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
-  m_PrefabInstance: {fileID: 97824161672801570}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab4fb15c98df5cf44b78112f2e57ea0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1463733377 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7063931390181292795, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
-  m_PrefabInstance: {fileID: 97824161672801570}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eba0a44e6a289048acdc1dd6f24ca31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1463733379 stripped
@@ -6946,7 +6924,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463733375}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: mixerController, Assembly-CSharp
         m_MethodName: PlaySounds
         m_Mode: 1
@@ -7361,7 +7339,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1463733375}
+      - m_Target: {fileID: 97824161672801571}
         m_TargetAssemblyTypeName: mixerController, Assembly-CSharp
         m_MethodName: SoundVolChange
         m_Mode: 1
@@ -7801,6 +7779,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+--- !u!114 &97824161672801571 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8142862177361788669, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+  m_PrefabInstance: {fileID: 97824161672801570}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4fb15c98df5cf44b78112f2e57ea0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5502625908072513487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7924,7 +7913,7 @@ PrefabInstance:
     - target: {fileID: -8822555217420028153, guid: 53e6d136395fe974cbb1073669fb96aa, type: 3}
       propertyPath: dialogueController
       value: 
-      objectReference: {fileID: 1463733377}
+      objectReference: {fileID: 0}
     - target: {fileID: 2879373425498140573, guid: 53e6d136395fe974cbb1073669fb96aa, type: 3}
       propertyPath: m_TagString
       value: Player

@@ -8,6 +8,7 @@ public class creditsController : MonoBehaviour
     public float speed = 50f;
     public float speedUpgrade = 100f;
     public bool inputPressed = false;
+    public UpgradeController upgrade;
     
     void Start()
     {
@@ -43,12 +44,16 @@ public class creditsController : MonoBehaviour
 
         if(transform.position.y >= 5500)
         {
+            upgrade.ResetUpgrades();
             controller.Load("menu");
+            
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            upgrade.ResetUpgrades();
             controller.Load("menu");
+            
 
         }
     }

@@ -1945,7 +1945,7 @@ MonoBehaviour:
   startDelay: 3
   interval: 5
   enemiesSpawned: 0
-  maxEnemies: 10
+  maxEnemies: 25
   enemyPrefab: {fileID: 3972770195667362456, guid: 47b62a7f921090f4f896f8f4e754093c, type: 3}
   explosion: {fileID: 4844207459857267984, guid: 05ed9d17908cc7d48bcd8a0ca610dae2, type: 3}
   audioPoof: {fileID: 1055754560}
@@ -3168,7 +3168,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 97824161672801571}
         m_TargetAssemblyTypeName: UpgradeController, Assembly-CSharp
         m_MethodName: ResetUpgrades
         m_Mode: 1
@@ -3545,7 +3545,7 @@ MonoBehaviour:
   startDelay: 2
   interval: 8
   enemiesSpawned: 0
-  maxEnemies: 15
+  maxEnemies: 30
   enemyPrefab: {fileID: 4676815933612397695, guid: 950f67ce03296784ebb533d91863477c, type: 3}
   flowerPrefab: {fileID: 9025682544043914974, guid: 9f2dd400dcc200a4594c50132a2f01af, type: 3}
   explosion: {fileID: 4844207459857267984, guid: 05ed9d17908cc7d48bcd8a0ca610dae2, type: 3}
@@ -4675,7 +4675,7 @@ MonoBehaviour:
   startDelay: 3
   interval: 5
   enemiesSpawned: 0
-  maxEnemies: 10
+  maxEnemies: 25
   enemyPrefab: {fileID: 3972770195667362456, guid: 47b62a7f921090f4f896f8f4e754093c, type: 3}
   explosion: {fileID: 4844207459857267984, guid: 05ed9d17908cc7d48bcd8a0ca610dae2, type: 3}
   audioPoof: {fileID: 1055754560}
@@ -7242,7 +7242,7 @@ MonoBehaviour:
   startDelay: 1
   interval: 5
   enemiesSpawned: 0
-  maxEnemies: 15
+  maxEnemies: 30
   enemyPrefab: {fileID: 4676815933612397695, guid: 950f67ce03296784ebb533d91863477c, type: 3}
   flowerPrefab: {fileID: 9025682544043914974, guid: 9f2dd400dcc200a4594c50132a2f01af, type: 3}
   explosion: {fileID: 4844207459857267984, guid: 05ed9d17908cc7d48bcd8a0ca610dae2, type: 3}
@@ -7983,11 +7983,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Mannager
       objectReference: {fileID: 0}
+    - target: {fileID: 8959192647154603355, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 1804262371}
+    - target: {fileID: 8959192647154603355, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: audioPopUp
+      value: 
+      objectReference: {fileID: 1114647976}
+    - target: {fileID: 8959192647154603355, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 1463733377}
+    - target: {fileID: 8959192647154603355, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: gameOverPanel
+      value: 
+      objectReference: {fileID: 1877858215}
+    - target: {fileID: 9043916245442141187, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 5502625908072513489}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+--- !u!114 &97824161672801571 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9043916245442141187, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+  m_PrefabInstance: {fileID: 97824161672801570}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edcb279755ac99747a0374f9c729c35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5502625908072513487
 PrefabInstance:
   m_ObjectHideFlags: 0

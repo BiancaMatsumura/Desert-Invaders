@@ -8,9 +8,14 @@ using UnityEngine.UI;
 public class BossController : MonoBehaviour
 {
     public int life;
+    public int secondLife;
     public Slider lifeSlider;
 
+    public int lifeTriple;
+    public int secondLifeTriple;
+
     public int damage;
+    public int secondDamage;
     public GameObject flowerPrefab;
     public Transform firePoint;
     public Transform firePoint2;
@@ -41,11 +46,20 @@ public class BossController : MonoBehaviour
 
         InvokeRepeating("ShootPattern", initialTimeShoot, intervalShoot);
         
+        lifeSlider.maxValue = life;
+
+        if (playerController.hasTripleShoot)
+        {
+            life = lifeTriple;
+            secondLife = secondLifeTriple;
+        }
+
     }
 
   
     void Update()
     {
+
         lifeSlider.value = life;
         BossMove();
 
@@ -61,7 +75,7 @@ public class BossController : MonoBehaviour
     {
         isInSecondPattern = true;
         CancelInvoke("ShootPattern");
-        damage += 10;
+        damage += secondDamage;
 
         yield return new WaitForSeconds(initialTimeShoot2);
 
@@ -100,7 +114,8 @@ public class BossController : MonoBehaviour
         {
             if (life <= 0)
             {
-                life = 500;
+                life = secondLife;
+                lifeSlider.maxValue = secondLife;
                 firstDeath = true;
                 explosion.SetActive(true);
             }

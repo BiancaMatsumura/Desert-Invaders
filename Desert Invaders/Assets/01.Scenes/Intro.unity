@@ -548,6 +548,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 981136405}
+  upgradeController: {fileID: 1684780715}
+  fase1: Intro
+  credits: victoryScene
 --- !u!224 &612882150
 RectTransform:
   m_ObjectHideFlags: 0
@@ -624,8 +627,6 @@ MonoBehaviour:
   starProjectile: {fileID: 0}
   firePoint: {fileID: 0}
   dialogueController: {fileID: 0}
-  trail: {fileID: 0}
-  screenWrap: {fileID: 0}
   hasTripleShoot: 0
   velocityIncreasedApplied: 0
   deadIncreasedApplied: 0
@@ -648,6 +649,7 @@ MonoBehaviour:
   gameOverPanel: {fileID: 0}
   audioPopUp: {fileID: 0}
   hasIncreasedTime: 0
+  controller: {fileID: 0}
 --- !u!4 &738934421
 Transform:
   m_ObjectHideFlags: 0
@@ -1372,6 +1374,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 981136410}
   m_SourcePrefab: {fileID: 100100000, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+--- !u!114 &1684780715 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9043916245442141187, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+  m_PrefabInstance: {fileID: 1684780714}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20503699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edcb279755ac99747a0374f9c729c35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2030918442
 GameObject:
   m_ObjectHideFlags: 0
