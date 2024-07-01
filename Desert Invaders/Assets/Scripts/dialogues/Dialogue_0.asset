@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d811a6f662898f34aad0a55b9356ad1d, type: 3}
   m_Name: Dialogue_0
   m_EditorClassIdentifier: 
-  massageName: Tutorial
-  message: Hello Sheriff, look around and shoot, save our Sand Land!
+  massageName: Fase1
+  message: Hello Sheriff, look around and shoot, save our Dusty Valley!

@@ -1765,7 +1765,7 @@ MonoBehaviour:
   startDelay: 3
   interval: 5
   enemiesSpawned: 0
-  maxEnemies: 10
+  maxEnemies: 15
   enemyPrefab: {fileID: 3972770195667362456, guid: 47b62a7f921090f4f896f8f4e754093c, type: 3}
   explosion: {fileID: 4844207459857267984, guid: 05ed9d17908cc7d48bcd8a0ca610dae2, type: 3}
   audioPoof: {fileID: 1055754560}
@@ -2896,7 +2896,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 97824161672801571}
         m_TargetAssemblyTypeName: mixerController, Assembly-CSharp
         m_MethodName: PlayMusic
         m_Mode: 1
@@ -3332,7 +3332,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 97824161672801571}
         m_TargetAssemblyTypeName: mixerController, Assembly-CSharp
         m_MethodName: StopSounds
         m_Mode: 1
@@ -3441,7 +3441,7 @@ MonoBehaviour:
   startDelay: 2
   interval: 8
   enemiesSpawned: 0
-  maxEnemies: 15
+  maxEnemies: 20
   enemyPrefab: {fileID: 4676815933612397695, guid: 950f67ce03296784ebb533d91863477c, type: 3}
   flowerPrefab: {fileID: 9025682544043914974, guid: 9f2dd400dcc200a4594c50132a2f01af, type: 3}
   explosion: {fileID: 4844207459857267984, guid: 05ed9d17908cc7d48bcd8a0ca610dae2, type: 3}
@@ -3875,7 +3875,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 97824161672801571}
         m_TargetAssemblyTypeName: mixerController, Assembly-CSharp
         m_MethodName: StopMusic
         m_Mode: 1
@@ -4571,7 +4571,7 @@ MonoBehaviour:
   startDelay: 3
   interval: 5
   enemiesSpawned: 0
-  maxEnemies: 10
+  maxEnemies: 15
   enemyPrefab: {fileID: 3972770195667362456, guid: 47b62a7f921090f4f896f8f4e754093c, type: 3}
   explosion: {fileID: 4844207459857267984, guid: 05ed9d17908cc7d48bcd8a0ca610dae2, type: 3}
   audioPoof: {fileID: 1055754560}
@@ -6924,7 +6924,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 97824161672801571}
         m_TargetAssemblyTypeName: mixerController, Assembly-CSharp
         m_MethodName: PlaySounds
         m_Mode: 1
@@ -7033,7 +7033,7 @@ MonoBehaviour:
   startDelay: 1
   interval: 5
   enemiesSpawned: 0
-  maxEnemies: 15
+  maxEnemies: 20
   enemyPrefab: {fileID: 4676815933612397695, guid: 950f67ce03296784ebb533d91863477c, type: 3}
   flowerPrefab: {fileID: 9025682544043914974, guid: 9f2dd400dcc200a4594c50132a2f01af, type: 3}
   explosion: {fileID: 4844207459857267984, guid: 05ed9d17908cc7d48bcd8a0ca610dae2, type: 3}
@@ -7666,6 +7666,58 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: popUpAudio
+      value: 
+      objectReference: {fileID: 1114647976}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: textContent
+      value: 
+      objectReference: {fileID: 1221379055}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: typingAudio
+      value: 
+      objectReference: {fileID: 1338991985}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 576437989}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: dialogues.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: dialogues.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3e57397d1a51c7745aefc20a4906bddc, type: 2}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: dialogues.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 92ecbd373f5d8764faa9d73e75cfc9f3, type: 2}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: dialogues.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 28607db0fa79bee41bb6c7f223c6c604, type: 2}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: dialogues.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7286bae8d66cbc14eab8b3974b91fb7f, type: 2}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: dialogues.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9bd9f7e2c2f594940bc6f73aea511ffd, type: 2}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: dialogues.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 87dcbcc66515ee3408b51d6bc4cfd9e6, type: 2}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: dialogues.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e7fde6bb16f49b49912763d384b891a, type: 2}
+    - target: {fileID: 3520907884942530707, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 97824161672801572}
     - target: {fileID: 4557883506209100178, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: m_Camera
       value: 
@@ -7754,9 +7806,21 @@ PrefabInstance:
       propertyPath: soundsVol
       value: 
       objectReference: {fileID: 2028279285}
+    - target: {fileID: 8142862177361788669, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: musicVol
+      value: 
+      objectReference: {fileID: 1057099202}
+    - target: {fileID: 8142862177361788669, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: soundsVol
+      value: 
+      objectReference: {fileID: 2028279285}
     - target: {fileID: 8789425517310495552, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: m_Name
       value: Game Mannager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959192647154603355, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: levelTime
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 8959192647154603355, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: timerText
@@ -7766,6 +7830,10 @@ PrefabInstance:
       propertyPath: audioPopUp
       value: 
       objectReference: {fileID: 1114647976}
+    - target: {fileID: 8959192647154603355, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 97824161672801572}
     - target: {fileID: 8959192647154603355, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: gameOverPanel
       value: 
@@ -7788,6 +7856,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab4fb15c98df5cf44b78112f2e57ea0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &97824161672801572 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+  m_PrefabInstance: {fileID: 97824161672801570}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eba0a44e6a289048acdc1dd6f24ca31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &5502625908072513487

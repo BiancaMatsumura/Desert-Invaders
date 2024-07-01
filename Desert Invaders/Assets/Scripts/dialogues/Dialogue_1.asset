@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d811a6f662898f34aad0a55b9356ad1d, type: 3}
   m_Name: Dialogue_1
   m_EditorClassIdentifier: 
-  massageName: Teste
-  message: "ooppaa isso aqui \xE9 um teste viu"
+  massageName: fase2
+  message: Sheriff, danger is afoot! Defend our town and keep the outlaws at bay!

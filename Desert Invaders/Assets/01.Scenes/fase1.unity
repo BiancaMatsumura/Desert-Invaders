@@ -8791,11 +8791,11 @@ PrefabInstance:
     - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: dialogues.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 3e57397d1a51c7745aefc20a4906bddc, type: 2}
+      objectReference: {fileID: 11400000, guid: 92ecbd373f5d8764faa9d73e75cfc9f3, type: 2}
     - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: dialogues.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 3e57397d1a51c7745aefc20a4906bddc, type: 2}
+      objectReference: {fileID: 11400000, guid: 28607db0fa79bee41bb6c7f223c6c604, type: 2}
     - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: dialogues.Array.data[4]
       value: 
@@ -8803,11 +8803,11 @@ PrefabInstance:
     - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: dialogues.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: 7286bae8d66cbc14eab8b3974b91fb7f, type: 2}
+      objectReference: {fileID: 11400000, guid: 9bd9f7e2c2f594940bc6f73aea511ffd, type: 2}
     - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: dialogues.Array.data[6]
       value: 
-      objectReference: {fileID: 11400000, guid: 7286bae8d66cbc14eab8b3974b91fb7f, type: 2}
+      objectReference: {fileID: 11400000, guid: 87dcbcc66515ee3408b51d6bc4cfd9e6, type: 2}
     - target: {fileID: 3446273297402816384, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: m_UiScaleMode
       value: 1
@@ -8914,7 +8914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8959192647154603355, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: levelTime
-      value: 80
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 8959192647154603355, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: timerText

@@ -3330,7 +3330,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 97824161672801575}
         m_TargetAssemblyTypeName: mixerController, Assembly-CSharp
         m_MethodName: PlayMusic
         m_Mode: 1
@@ -3766,7 +3766,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 97824161672801575}
         m_TargetAssemblyTypeName: mixerController, Assembly-CSharp
         m_MethodName: StopSounds
         m_Mode: 1
@@ -4309,7 +4309,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 97824161672801575}
         m_TargetAssemblyTypeName: mixerController, Assembly-CSharp
         m_MethodName: StopMusic
         m_Mode: 1
@@ -7409,7 +7409,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 97824161672801575}
         m_TargetAssemblyTypeName: mixerController, Assembly-CSharp
         m_MethodName: PlaySounds
         m_Mode: 1
@@ -8280,13 +8280,49 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: popUpAudio
+      value: 
+      objectReference: {fileID: 1114647976}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: textContent
       value: 
       objectReference: {fileID: 403501439}
     - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: typingAudio
+      value: 
+      objectReference: {fileID: 1338991985}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 1216375272}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: dialogues.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: dialogues.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3e57397d1a51c7745aefc20a4906bddc, type: 2}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: dialogues.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 92ecbd373f5d8764faa9d73e75cfc9f3, type: 2}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: dialogues.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 28607db0fa79bee41bb6c7f223c6c604, type: 2}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: dialogues.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7286bae8d66cbc14eab8b3974b91fb7f, type: 2}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: dialogues.Array.data[5]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: dialogues.Array.data[6]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3446273297402816384, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: m_UiScaleMode
       value: 1
@@ -8397,7 +8433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8959192647154603355, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: levelTime
-      value: 70
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 8959192647154603355, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: m_Enabled
