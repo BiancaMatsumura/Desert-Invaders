@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +10,10 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Player Properties")]
     public int life;
+    public int maxLife;
     public int damage;
+    public float shootInterval = 0.1f;
+    private float nextShootTime = 0f;
     public float moveSpeed;
     public int enemiesDestroyed;
     public int enemiesToWin = 10;
@@ -37,10 +41,13 @@ public class PlayerController : MonoBehaviour
     public Slider shieldBar;
     public Slider dashBar;
     public Text enemiesText;
+    public Text enemiesToWinText;
     public GameObject pausePanel;
     public GameObject gameOverPanel;
     public GameObject youFailedPanel;
     public GameObject victoryPanel;
+    public GameObject damagePanel;
+    public Animator damageAnim;
 
     [Header("Assigments")]
     public GameObject starProjectile;
@@ -77,6 +84,17 @@ public class PlayerController : MonoBehaviour
         canDash = true;
         dashBar.maxValue = dashCooldown;
         dashBar.value = dashCooldown;
+
+        enemiesToWinText.text = $"/ {enemiesToWin}";
+
+        maxLife = life;
+        healthSlider.maxValue = life;
+
+        if (deadIncreasedApplied)
+        {
+            enemiesToWin += 7;
+            enemiesToWinText.text = $"/ {enemiesToWin}";
+        }
     }
 
 
@@ -87,10 +105,11 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        if (!pausePanel.activeSelf && !victoryPanel.activeSelf && !gameOverPanel.activeSelf && !youFailedPanel.activeSelf && Input.GetButtonDown("Fire1"))
+        if (!pausePanel.activeSelf && !victoryPanel.activeSelf && !gameOverPanel.activeSelf && !youFailedPanel.activeSelf && Input.GetButton("Fire1") && Time.time >= nextShootTime)
         {
             Shoot();
             audioShoot.Play();
+            nextShootTime = Time.time + shootInterval;
         }
         
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -207,11 +226,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private IEnumerator HudDamage()
+    {
+        damagePanel.SetActive(true);
+        damageAnim.SetTrigger("TakeDamage");
+        yield return new WaitForSeconds(0.5f);
+        damageAnim.SetTrigger("StopDamage");
+        damagePanel.SetActive(false);
+        
+    }
+
     public void PlayerTakeDamege(int damageAmount)
     {
        
         if (!hasShield)
         {
+            StartCoroutine(HudDamage());
             life -= damageAmount;
             audioDamage.Play();
             if (!hasDialogueDamage)
@@ -248,9 +278,14 @@ public class PlayerController : MonoBehaviour
         }
         if(other.gameObject.CompareTag("Life Item")) 
         {
-            life += cure;
+            if (life <= maxLife)
+            {
+                life += cure;
+                
+            }
             audioItem.Play();
             Destroy(other.gameObject);
+
         }
     }
 
