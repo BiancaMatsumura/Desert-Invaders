@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
     public GameObject youFailedPanel;
     public GameObject victoryPanel;
     public GameObject damagePanel;
-    public Animator damageAnim;
+   
 
     [Header("Assigments")]
     public GameObject starProjectile;
@@ -85,15 +85,19 @@ public class PlayerController : MonoBehaviour
         dashBar.maxValue = dashCooldown;
         dashBar.value = dashCooldown;
 
+       
         enemiesToWinText.text = $"/ {enemiesToWin}";
+      
 
         maxLife = life;
         healthSlider.maxValue = life;
 
         if (deadIncreasedApplied)
         {
-            enemiesToWin += 7;
+            
+           
             enemiesToWinText.text = $"/ {enemiesToWin}";
+
         }
     }
 
@@ -229,9 +233,9 @@ public class PlayerController : MonoBehaviour
     private IEnumerator HudDamage()
     {
         damagePanel.SetActive(true);
-        damageAnim.SetTrigger("TakeDamage");
+       
         yield return new WaitForSeconds(0.5f);
-        damageAnim.SetTrigger("StopDamage");
+       
         damagePanel.SetActive(false);
         
     }

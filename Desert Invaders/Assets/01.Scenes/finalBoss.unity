@@ -2440,6 +2440,7 @@ MonoBehaviour:
   pointA: {fileID: 1837736135}
   pointB: {fileID: 2088286154}
   victoryPanel: {fileID: 60396553}
+  dialogueController: {fileID: 1463733374}
 --- !u!4 &697085233 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 490048411277010821, guid: 6b2754ee05153134190eee860a873c30, type: 3}
@@ -8395,7 +8396,7 @@ PrefabInstance:
       objectReference: {fileID: 1216375272}
     - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: dialogues.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: dialogues.Array.data[1]
@@ -8416,11 +8417,15 @@ PrefabInstance:
     - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: dialogues.Array.data[5]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: cac26ffa43c4f714abfd24903c05a06a, type: 2}
     - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: dialogues.Array.data[6]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 25b0b38c76d43ef4aa17e088ad3570c7, type: 2}
+    - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
+      propertyPath: dialogues.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 996bd84b93dd1f84db7142b60a101672, type: 2}
     - target: {fileID: 3446273297402816384, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: m_UiScaleMode
       value: 1

@@ -40,6 +40,8 @@ public class BossController : MonoBehaviour
     private int currentShoot = 0;
 
     private GameObject explosion;
+
+    public DialogueController dialogueController;
     void Start()
     {
         explosion = transform.Find("CFXR2 Firewall A").gameObject;
@@ -118,6 +120,7 @@ public class BossController : MonoBehaviour
                 lifeSlider.maxValue = secondLife;
                 firstDeath = true;
                 explosion.SetActive(true);
+                dialogueController.ShowDialogueByIndex(7);
             }
         }
     }

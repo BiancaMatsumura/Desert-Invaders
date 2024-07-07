@@ -9,44 +9,48 @@ public class UpgradeController : MonoBehaviour
 
     void Start()
     {
-
-        if (PlayerPrefs.GetInt("VelocityIncreased", 0) == 1)
+        if (player != null) 
         {
-            player.moveSpeed += 4;
-            player.dashVelocity += 4;
-            player.velocityIncreasedApplied = true;
-        }
+            if (PlayerPrefs.GetInt("VelocityIncreased", 0) == 1)
+            {
+                player.moveSpeed += 4;
+                player.dashVelocity += 4;
+                player.velocityIncreasedApplied = true;
+            }
 
-        if (PlayerPrefs.GetInt("TripleShoot", 0) == 1)
-        {
-            player.hasTripleShoot = true;
-        }
+            if (PlayerPrefs.GetInt("TripleShoot", 0) == 1)
+            {
+                player.hasTripleShoot = true;
+            }
 
-        if (PlayerPrefs.GetInt("IncreasedDead", 0) == 1)
-        {
-           
-            player.deadIncreasedApplied = true;
-        }
+            if (PlayerPrefs.GetInt("IncreasedDead", 0) == 1)
+            {
+                player.enemiesToWin += 7;
+                player.deadIncreasedApplied = true;
+            }
 
-        if (PlayerPrefs.GetInt("IncreasedShield", 0) == 1)
-        {
-            player.shieldTime += 5;
-            player.hasIncreasedShield = true;
-        }
+            if (PlayerPrefs.GetInt("IncreasedShield", 0) == 1)
+            {
+                player.shieldTime += 5;
+                player.hasIncreasedShield = true;
+            }
 
-        if (PlayerPrefs.GetInt("IncreasedCure", 0) == 1)
-        {
-            player.cure += 5;
-            player.life += 50;
-            player.hasIncreasedCure = true;
-        }
+            if (PlayerPrefs.GetInt("IncreasedCure", 0) == 1)
+            {
+                player.cure += 5;
+                player.life += 50;
+                player.hasIncreasedCure = true;
+            }
 
-        
-        if (PlayerPrefs.GetInt("IncreasedTime", 0) == 1)
-        {
-            levelTimer.levelTime += 30;
-            levelTimer.hasIncreasedTime = true;
+
+            if (PlayerPrefs.GetInt("IncreasedTime", 0) == 1)
+            {
+                levelTimer.levelTime += 30;
+                levelTimer.hasIncreasedTime = true;
+            }
+
         }
+       
     }
 
 
@@ -84,6 +88,7 @@ public class UpgradeController : MonoBehaviour
     {
         if(!player.deadIncreasedApplied)
         {
+            player.enemiesToWin += 7;
             player.deadIncreasedApplied = true;
             PlayerPrefs.SetInt("IncreasedDead", 1);
         }

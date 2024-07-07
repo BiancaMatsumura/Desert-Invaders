@@ -64,9 +64,13 @@ public class Timer : MonoBehaviour
 
     void UpdateTime()
     {
-        int minutes = Mathf.FloorToInt(levelTime / 60);
-        int seconds = Mathf.FloorToInt(levelTime % 60);
-        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        if(timerText != null)
+        {
+            int minutes = Mathf.FloorToInt(levelTime / 60);
+            int seconds = Mathf.FloorToInt(levelTime % 60);
+            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
+        
     }
 
     void GameOver()

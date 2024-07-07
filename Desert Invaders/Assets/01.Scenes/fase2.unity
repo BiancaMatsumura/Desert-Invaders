@@ -7803,11 +7803,11 @@ PrefabInstance:
     - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: dialogues.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: 9bd9f7e2c2f594940bc6f73aea511ffd, type: 2}
+      objectReference: {fileID: 11400000, guid: 2047adc0a6e606b43a07687cc9a906f2, type: 2}
     - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: dialogues.Array.data[6]
       value: 
-      objectReference: {fileID: 11400000, guid: 87dcbcc66515ee3408b51d6bc4cfd9e6, type: 2}
+      objectReference: {fileID: 11400000, guid: 9a78b9fdcc766de45ab64d7ac6fc045c, type: 2}
     - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: dialogues.Array.data[7]
       value: 
@@ -8106,7 +8106,7 @@ PrefabInstance:
     - target: {fileID: -8822555217420028153, guid: 53e6d136395fe974cbb1073669fb96aa, type: 3}
       propertyPath: dialogueController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 97824161672801572}
     - target: {fileID: 2879373425498140573, guid: 53e6d136395fe974cbb1073669fb96aa, type: 3}
       propertyPath: m_TagString
       value: Player

@@ -7906,11 +7906,11 @@ PrefabInstance:
     - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: dialogues.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: 9bd9f7e2c2f594940bc6f73aea511ffd, type: 2}
+      objectReference: {fileID: 11400000, guid: 906eb8256a03aa44f8f5ef560663030f, type: 2}
     - target: {fileID: 1008539258974812322, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: dialogues.Array.data[6]
       value: 
-      objectReference: {fileID: 11400000, guid: 87dcbcc66515ee3408b51d6bc4cfd9e6, type: 2}
+      objectReference: {fileID: 11400000, guid: 07900cbd2e0129a449c084146fe4117d, type: 2}
     - target: {fileID: 3049211614062219631, guid: 1b07e4ca1611af644a3eba43178cb14e, type: 3}
       propertyPath: player
       value: 

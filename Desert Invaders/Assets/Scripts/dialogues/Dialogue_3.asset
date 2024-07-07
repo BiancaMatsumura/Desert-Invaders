@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Dialogue_3
   m_EditorClassIdentifier: 
   massageName: finalBoss
-  message: "Sheriff, this is it! The ultimate battle awaits \u2013 defeat the King
-    Thorn and save Dusty Valley once and for all!"
+  message: King Thorn is here! Watch out for his poisonous flowers and deadly thorns!
