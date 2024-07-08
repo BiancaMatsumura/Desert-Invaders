@@ -85,17 +85,18 @@ public class PlayerController : MonoBehaviour
         dashBar.maxValue = dashCooldown;
         dashBar.value = dashCooldown;
 
-       
+
+        Debug.Log($"Setting enemiesToWinText to: / {enemiesToWin}");
         enemiesToWinText.text = $"/ {enemiesToWin}";
-      
+
 
         maxLife = life;
         healthSlider.maxValue = life;
 
         if (deadIncreasedApplied)
         {
-            
-           
+            Debug.Log("deadIncreasedApplied is true");
+            Debug.Log($"Updating enemiesToWinText to: / {enemiesToWin}");
             enemiesToWinText.text = $"/ {enemiesToWin}";
 
         }

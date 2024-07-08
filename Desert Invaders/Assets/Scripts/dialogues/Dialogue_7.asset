@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Dialogue_7
   m_EditorClassIdentifier: 
   massageName: cacto
-  message: '"Watch out! The cacti are attacking with their poisonous flowers!'
+  message: Watch out! The cacti are attacking with their poisonous flowers!

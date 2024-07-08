@@ -26,6 +26,7 @@ public class UpgradeController : MonoBehaviour
             if (PlayerPrefs.GetInt("IncreasedDead", 0) == 1)
             {
                 player.enemiesToWin += 7;
+                player.enemiesToWinText.text = $"/ {player.enemiesToWin}";
                 player.deadIncreasedApplied = true;
             }
 
@@ -90,6 +91,7 @@ public class UpgradeController : MonoBehaviour
         {
             player.enemiesToWin += 7;
             player.deadIncreasedApplied = true;
+            
             PlayerPrefs.SetInt("IncreasedDead", 1);
         }
     }
