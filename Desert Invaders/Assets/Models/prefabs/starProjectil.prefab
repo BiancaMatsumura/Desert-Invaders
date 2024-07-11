@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dfc2c3f8dad4f34399186f051b16536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spd: 20
+  spd: 25
   projectileDamage: 0
   lifeTime: 3
   playerController: {fileID: 0}
